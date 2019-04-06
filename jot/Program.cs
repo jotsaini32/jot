@@ -39,6 +39,8 @@ namespace jot
                 }
                 file.Close();
                 Console.WriteLine($"File has {counter} lines.");
+         // all lines contains 10 words so total words = 
+                Console.WriteLine($"File has {counter*10} lines.");
             }
         }
         public int FindNumberOfBlankSpaces(string line)
@@ -57,4 +59,3 @@ namespace jot
         }
     }
 }
-
