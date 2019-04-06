@@ -18,7 +18,7 @@ namespace jot
         {
             Program p = new Program();
             p.Beowulf = new ArrayList();
-            p.Wordfinder();
+            p.Wordskipper();
             Console.ReadLine();
         }
         public void Run() { this.ReadTextFiles(); }
@@ -54,6 +54,19 @@ namespace jot
                 }
             }
             Console.WriteLine(f);
+        }
+        public void Wordskipper()
+        {
+            int f = 0;
+            foreach (var line in File.ReadAllLines("U:/Users/727172/New folder/jot/beowulf.txt"))
+            {
+                f++;
+                if (line.Contains("fare") && (!line.Contains("war")))
+                {
+                    Console.WriteLine(f);
+                }
+
+            }
         }
 
         public int FindNumberOfBlankSpaces(string line)
