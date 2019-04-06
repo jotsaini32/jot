@@ -16,12 +16,16 @@ namespace jot
         {
             Program p = new Program();
             p.Beowulf = new ArrayList();
+            p.ReadTextFiles();
+            Console.ReadLine();
+
+
         }
         public void Run() { this.ReadTextFiles(); }
         public void ReadTextFiles()
         {
             //Read file using StreamReader.Reads file line by line
-            using (StreamReader file = new StreamReader("c:/area51/beowulf.txt"))
+            using (StreamReader file = new StreamReader("U:/Users/727172/New folder/jot/beowulf.txt"))
             {
                 int counter = 0;
                 string ln;
@@ -31,6 +35,7 @@ namespace jot
                 {
                     Console.WriteLine(ln);
                     Beowulf.Add(ln);
+                    counter++;
                 }
                 file.Close();
                 Console.WriteLine($"File has {counter} lines.");
