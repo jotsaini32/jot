@@ -46,8 +46,7 @@ namespace jot
             }
             Console.WriteLine(f);}
         public void Wordskipper()
-        {
-            int f = 0;
+        { int f = 0;
             foreach (var line in File.ReadAllLines("U:/Users/727172/New folder/jot/beowulf.txt")){
                 f++;
                 if (line.Contains("fare") && (!line.Contains("war")))
